@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Mail;
 use Faker\Provider\Image;
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\DiwaliCampaign;
+use Illuminate\Support\Facades\Redirect;
 
 class DiwaliCampaignController extends Controller
 {
@@ -79,7 +79,7 @@ class DiwaliCampaignController extends Controller
                 $message->from('avitaind@gmail.com');
                 $message->to('avitaind@gmail.com', 'Admin')->subject('Diwali Campaign');
     });
-
+        //Redirect::to('/');
 	    return redirect()->back()->with('message', 'Thank you for your submission . You shall receive a confirmation mail shortly');
         //return redirect('/')->back()->with('message', 'Thank you for your submission . You shall receive a confirmation mail shortly');
 
