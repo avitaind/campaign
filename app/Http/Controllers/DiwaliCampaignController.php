@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Mail;
 use Faker\Provider\Image;
-use Imagick;
-
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
